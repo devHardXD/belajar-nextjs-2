@@ -1,3 +1,5 @@
-export default function Users(){
-    return <h1>Users Count!</h1>
+import { Card } from "@/app/components/card"
+
+export default function UsersAnalytics(){
+    return <Card>Users Count!</Card>
 }
