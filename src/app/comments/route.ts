@@ -6,7 +6,7 @@ export async function GET(){
 
 export async function POST(request: Request){
     const comment = await request.json();
-    const newComment = {
+    const newComment= {
         id: Comments.length + 1,
         text: comment.text
     }
