@@ -1,16 +1,16 @@
-import { Comments } from "./data";
+import { comments } from "./data";
 
 export async function GET(){
-    return Response.json(Comments);
+    return Response.json(comments);
 }
 
 export async function POST(request: Request){
     const comment = await request.json();
     const newComment= {
-        id: Comments.length + 1,
+        id: comments.length + 1,
         text: comment.text
     }
-    Comments.push(newComment);
+    comments.push(newComment);
     return new Response(JSON.stringify(newComment), {
         headers: {"Content-Type" : "application/json"},
         status: 201,
